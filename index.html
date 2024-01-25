@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet"></head>
+<body>
+    <header>
+        <img class="logo-alura" src="imagenes/Logo.png" alt="Logo Alura">
+    </header>
+    <main>
+        <section class="section-encriptar">
+            <textarea id="textomensaje"  class="campo-encriptar" placeholder="Ingrese el texto aqui"></textarea>
+            <p class="mensaje-alerta"> <i class="bi bi-exclamation-circle-fill"></i> Solo letras minúsculas y sin acentos</p>
+            <input onclick="encriptar()" class="boton-encriptar" type="submit" value="Encriptar">
+            <input onclick="desencriptar()" class="boton-desencriptar" type="submit" value="Desencriptar">
+        </section>
+        <section class="section-mensaje">
+            <label id="mensajeContenido" class="mensaje-encriptado">
+                <div id="contenidoImagenEspera" class="contenido-imagen">
+                    <img class="imagen-busqueda"  src="imagenes/Muñeco.png" alt="Dibujo de no encontro datos">
+                    <h3><strong>Ningún mensaje fue encontrado</strong></h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </label>
+            
+            <input onclick="copiarTexto()" id="botonCopiar" class="boton-copiar" type="submit" value="Copiar" hidden>
+            
+        </section>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
